@@ -8,7 +8,7 @@ const pres = [
         author: 'George R.R. Martin', 
         eta: 'Dec 2024', 
         price: 599,
-        image: '/section/PreOrder/1.png'
+        image: '/section/PreOrder/1.jpeg'
     },
     { 
         id: 'pre-2',
@@ -16,7 +16,7 @@ const pres = [
         author: 'James Clear', 
         eta: 'Jan 2025', 
         price: 449,
-        image: '/section/PreOrder/2.png'
+        image: '/section/PreOrder/2.jpeg'
     },
     { 
         id: 'pre-3',
@@ -24,7 +24,7 @@ const pres = [
         author: 'Yuval Noah Harari', 
         eta: 'Feb 2025', 
         price: 699,
-        image: '/section/PreOrder/3.png'
+        image: '/section/PreOrder/3.jpeg'
     },
     { 
         id: 'pre-4',
@@ -32,7 +32,7 @@ const pres = [
         author: 'Cal Newport', 
         eta: 'Mar 2025', 
         price: 529,
-        image: '/section/PreOrder/4.png'
+        image: '/section/PreOrder/4.jpeg'
     },
 ]
 

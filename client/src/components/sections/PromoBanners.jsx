@@ -8,7 +8,7 @@ export default function PromoBanners() {
             subtitle: "Accelerate your learning journey",
             buttonText: "Explore Series",
             gradient: "from-indigo-500 to-purple-600",
-            image: "/section/PromoBanners/1.png"
+            image: "/section/PromoBanners/1.jpeg"
         },
         {
             id: 2,
@@ -16,7 +16,7 @@ export default function PromoBanners() {
             subtitle: "Timeless stories for young readers",
             buttonText: "Browse Classics",
             gradient: "from-green-500 to-teal-600",
-            image: "/section/PromoBanners/2.png"
+            image: "/section/PromoBanners/2.jpeg"
         },
         {
             id: 3,
@@ -24,7 +24,7 @@ export default function PromoBanners() {
             subtitle: "Thrilling tales await",
             buttonText: "Discover Adventures",
             gradient: "from-rose-600 to-pink-600",
-            image: "/section/PromoBanners/3.png",
+            image: "/section/PromoBanners/3.jpeg",
             fullWidth: true
         }
     ]

@@ -8,7 +8,7 @@ const items = [
         author: 'Sarah J. Maas', 
         price: 499, 
         rating: 4.9,
-        image: '/section/NewArrivals/1.png'
+        image: '/section/NewArrivals/1.jpeg'
     },
     { 
         id: 'new-2', 
@@ -16,7 +16,7 @@ const items = [
         author: 'Tech Author', 
         price: 399, 
         rating: 4.6,
-        image: '/section/NewArrivals/2.png'
+        image: '/section/NewArrivals/2.jpeg'
     },
     { 
         id: 'new-3', 
@@ -24,7 +24,7 @@ const items = [
         author: 'Dr. Mind', 
         price: 549, 
         rating: 4.8,
-        image: '/section/NewArrivals/3.png'
+        image: '/section/NewArrivals/3.jpeg'
     },
     { 
         id: 'new-4', 
@@ -32,7 +32,7 @@ const items = [
         author: 'Environmental Expert', 
         price: 429, 
         rating: 4.7,
-        image: '/section/NewArrivals/4.png'
+        image: '/section/NewArrivals/4.jpeg'
     },
     { 
         id: 'new-5', 
@@ -40,7 +40,7 @@ const items = [
         author: 'NASA Scientists', 
         price: 599, 
         rating: 4.9,
-        image: '/section/NewArrivals/5.png'
+        image: '/section/NewArrivals/5.jpeg'
     },
 ]
 

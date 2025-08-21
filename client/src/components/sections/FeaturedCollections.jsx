@@ -10,7 +10,7 @@ export default function FeaturedCollections() {
             to: 'to-purple-600', 
             btn: 'Shop Now',
             items: '500+ Books',
-            image: '/section/FeaturedCollections/1.png'
+            image: '/section/FeaturedCollections/1.jpeg'
         },
         { 
             title: 'Stationery', 
@@ -20,7 +20,7 @@ export default function FeaturedCollections() {
             to: 'to-blue-600', 
             btn: 'Shop Now',
             items: '200+ Items',
-            image: '/section/FeaturedCollections/2.png'
+            image: '/section/FeaturedCollections/2.jpeg'
         },
         { 
             title: 'Activity Books', 
@@ -30,7 +30,7 @@ export default function FeaturedCollections() {
             to: 'to-orange-600', 
             btn: 'Shop Now',
             items: '150+ Activities',
-            image: '/section/FeaturedCollections/3.png'
+            image: '/section/FeaturedCollections/3.jpeg'
         },
         { 
             title: "Children's Books", 
@@ -40,7 +40,7 @@ export default function FeaturedCollections() {
             to: 'to-rose-600', 
             btn: 'Shop Now',
             items: '300+ Stories',
-            image: '/section/FeaturedCollections/4.png'
+            image: '/section/FeaturedCollections/4.jpeg'
         },
     ]
 
