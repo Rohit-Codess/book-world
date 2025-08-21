@@ -36,7 +36,7 @@ export default function Hero() {
     }, [slides.length])
 
     return (
-        <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <section className="relative h-[50vh] flex items-center justify-center overflow-hidden">
             {/* Sliding Background Container */}
             <div className="absolute inset-0 flex transition-transform duration-1000 ease-in-out"
                  style={{ transform: `translateX(-${currentSlide * 100}%)` }}>
@@ -60,55 +60,55 @@ export default function Hero() {
             </div>
 
             {/* Main Content - Professional Mobile Design */}
-            <div className="relative z-10 text-center px-4 sm:px-6 max-w-4xl mx-auto">
-                <div className="space-y-6 sm:space-y-8">
+            <div className="relative z-10 text-center px-4 sm:px-6 max-w-4xl mx-auto py-4">
+                <div className="space-y-4 sm:space-y-6">
                     {/* Professional Trust Badge */}
-                    <div className="inline-flex items-center bg-blue-600 text-white rounded-full px-4 sm:px-6 py-2 sm:py-3 shadow-lg">
-                        <i className="fa-solid fa-star text-yellow-400 mr-2 text-sm sm:text-base"></i>
+                    <div className="inline-flex items-center bg-blue-600 text-white rounded-full px-3 sm:px-6 py-1.5 sm:py-3 shadow-lg">
+                        <i className="fa-solid fa-star text-yellow-400 mr-2 text-xs sm:text-base"></i>
                         <span className="text-xs sm:text-sm font-semibold tracking-wide">TRUSTED BY EDUCATORS</span>
-                        <i className="fa-solid fa-star text-yellow-400 ml-2 text-sm sm:text-base"></i>
+                        <i className="fa-solid fa-star text-yellow-400 ml-2 text-xs sm:text-base"></i>
                     </div>
 
-                    {/* Professional Typography */}
-                    <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-white">
+                    {/* Professional Typography - Mobile Optimized */}
+                    <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-white">
                         {slides[currentSlide].title}
                     </h1>
                     
-                    <p className="text-base sm:text-lg md:text-xl leading-relaxed text-white/90 max-w-2xl mx-auto font-light">
+                    <p className="text-sm sm:text-lg md:text-xl leading-relaxed text-white/90 max-w-2xl mx-auto font-light">
                         {slides[currentSlide].subtitle}
                     </p>
                     
                     {/* Professional Action Buttons - Mobile Optimized */}
-                    <div className="flex flex-col gap-4 w-full max-w-sm mx-auto">
+                    <div className="flex flex-col gap-3 w-full max-w-xs sm:max-w-sm mx-auto pt-2">
                         <Link
                             to={slides[currentSlide].link}
-                            className="w-full bg-red-600 hover:bg-red-700 text-white font-semibold py-4 px-6 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 flex items-center justify-center gap-3"
+                            className="w-full bg-red-600 hover:bg-red-700 text-white font-semibold py-3 sm:py-4 px-4 sm:px-6 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 flex items-center justify-center gap-2 sm:gap-3"
                         >
-                            <i className="fa-solid fa-book text-lg"></i>
-                            <span className="text-lg">{slides[currentSlide].cta}</span>
+                            <i className="fa-solid fa-book text-sm sm:text-lg"></i>
+                            <span className="text-sm sm:text-lg">{slides[currentSlide].cta}</span>
                         </Link>
 
                         <Link
                             to="/catalog"
-                            className="w-full bg-white/90 hover:bg-white text-gray-800 font-semibold py-4 px-6 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 flex items-center justify-center gap-3"
+                            className="w-full bg-white/90 hover:bg-white text-gray-800 font-semibold py-3 sm:py-4 px-4 sm:px-6 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 flex items-center justify-center gap-2 sm:gap-3"
                         >
-                            <i className="fa-solid fa-list text-lg"></i>
-                            <span className="text-lg">View Catalog</span>
+                            <i className="fa-solid fa-list text-sm sm:text-lg"></i>
+                            <span className="text-sm sm:text-lg">View Catalog</span>
                         </Link>
                     </div>
                 </div>
             </div>
 
             {/* Professional Slide Indicators */}
-            <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex space-x-2">
+            <div className="absolute bottom-4 sm:bottom-6 left-1/2 transform -translate-x-1/2 flex space-x-2">
                 {slides.map((_, index) => (
                     <button
                         key={index}
                         onClick={() => setCurrentSlide(index)}
                         className={`transition-all duration-300 rounded-full ${
                             index === currentSlide 
-                                ? 'w-8 h-3 bg-white' 
-                                : 'w-3 h-3 bg-white/50 hover:bg-white/70'
+                                ? 'w-6 sm:w-8 h-2 sm:h-3 bg-white' 
+                                : 'w-2 sm:w-3 h-2 sm:h-3 bg-white/50 hover:bg-white/70'
                         }`}
                     />
                 ))}
