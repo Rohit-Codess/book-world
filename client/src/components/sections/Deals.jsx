@@ -82,7 +82,7 @@ export default function Deals() {
                         </h2>
                         <p className="text-gray-600">Limited time offers on bestselling books</p>
                     </div>
-                    <a href="#" className="btn-secondary flex items-center gap-2 hover:gap-3 transition-all duration-300">
+                    <a href="#" className="btn-view-all hover:gap-3 transition-all duration-300">
                         View All 
                         <i className="fa-solid fa-arrow-right" />
                     </a>

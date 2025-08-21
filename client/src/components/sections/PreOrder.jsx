@@ -64,7 +64,7 @@ export default function PreOrder() {
                         </h2>
                         <p className="text-gray-600">Reserve your copy of upcoming bestsellers</p>
                     </div>
-                    <a className="btn-secondary flex items-center gap-2 hover:gap-3 transition-all duration-300" href="#">
+                    <a className="btn-view-all hover:gap-3 transition-all duration-300" href="#">
                         View All 
                         <i className="fa-solid fa-arrow-right" />
                     </a>

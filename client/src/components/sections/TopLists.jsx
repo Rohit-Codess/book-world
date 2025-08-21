@@ -236,7 +236,7 @@ export default function TopLists() {
                             </h2>
                             <p className="text-gray-600">Most loved fiction books by our readers</p>
                         </div>
-                        <a className="btn-secondary flex items-center gap-2 hover:gap-3 transition-all duration-300" href="#">
+                        <a className="btn-view-all hover:gap-3 transition-all duration-300" href="#">
                             View All 
                             <i className="fa-solid fa-arrow-right" />
                         </a>
@@ -260,7 +260,7 @@ export default function TopLists() {
                             </h2>
                             <p className="text-gray-600">Coming-of-age stories that resonate with teens</p>
                         </div>
-                        <a className="btn-secondary flex items-center gap-2 hover:gap-3 transition-all duration-300" href="#">
+                        <a className="btn-view-all hover:gap-3 transition-all duration-300" href="#">
                             View All 
                             <i className="fa-solid fa-arrow-right" />
                         </a>
@@ -284,7 +284,7 @@ export default function TopLists() {
                             </h2>
                             <p className="text-gray-600">Magical stories that spark imagination in young minds</p>
                         </div>
-                        <a className="btn-secondary flex items-center gap-2 hover:gap-3 transition-all duration-300" href="#">
+                        <a className="btn-view-all hover:gap-3 transition-all duration-300" href="#">
                             View All 
                             <i className="fa-solid fa-arrow-right" />
                         </a>

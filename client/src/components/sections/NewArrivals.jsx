@@ -72,7 +72,7 @@ export default function NewArrivals() {
                         </h2>
                         <p className="text-gray-600">Fresh books just landed on our shelves</p>
                     </div>
-                    <a href="#" className="btn-secondary flex items-center gap-2 hover:gap-3 transition-all duration-300">
+                    <a href="#" className="btn-view-all hover:gap-3 transition-all duration-300">
                         View All 
                         <i className="fa-solid fa-arrow-right" />
                     </a>
