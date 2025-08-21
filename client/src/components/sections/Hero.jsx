@@ -36,7 +36,7 @@ export default function Hero() {
     }, [slides.length])
 
     return (
-        <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gray-50">
+        <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
             {/* Sliding Background Container */}
             <div className="absolute inset-0 flex transition-transform duration-1000 ease-in-out"
                  style={{ transform: `translateX(-${currentSlide * 100}%)` }}>
@@ -45,7 +45,7 @@ export default function Hero() {
                         key={index}
                         className="min-w-full h-full relative"
                     >
-                        {/* Background Image - Full visibility */}
+                        {/* Background Image */}
                         <div 
                             className="absolute inset-0 bg-cover bg-center bg-no-repeat"
                             style={{
@@ -53,156 +53,65 @@ export default function Hero() {
                             }}
                         />
                         
-                        {/* Light overlay for text readability */}
-                        <div className="absolute inset-0 bg-black/45"></div>
+                        {/* Professional dark overlay for better text readability */}
+                        <div className="absolute inset-0 bg-black/70"></div>
                     </div>
                 ))}
             </div>
 
-            {/* Simple Educational Icons */}
-            <div className="absolute inset-0 pointer-events-none opacity-10">
-                <div className="absolute top-[15%] left-[5%] text-blue-400 text-6xl">
-                    <i className="fa-solid fa-graduation-cap" />
-                </div>
-                <div className="absolute bottom-[20%] right-[8%] text-indigo-400 text-5xl">
-                    <i className="fa-solid fa-book-open" />
-                </div>
-                <div className="absolute top-[25%] right-[15%] text-blue-300 text-4xl">
-                    <i className="fa-solid fa-pencil" />
-                </div>
-                <div className="absolute bottom-[35%] left-[10%] text-indigo-300 text-4xl">
-                    <i className="fa-solid fa-lightbulb" />
-                </div>
-            </div>
-
-            {/* Main Content - Clean and Professional */}
-            <div className="relative z-10 text-center px-6 max-w-6xl mx-auto pb-20">
-                <div>
-                    {/* Educational Badge */}
-                    <div className="group inline-flex items-center bg-blue-100 hover:bg-blue-200 rounded-full m-3 px-6 py-3 mb-8 border border-blue-200 hover:border-blue-300 transition-all duration-500 cursor-pointer transform hover:scale-105 hover:-translate-y-1 hover:shadow-lg">
-                        <i className="fa-solid fa-award text-blue-600 mr-2 group-hover:animate-spin group-hover:text-blue-700 transition-colors duration-300" />
-                        <span className="text-sm font-semibold text-blue-800 tracking-wide group-hover:text-blue-900 transition-colors duration-300">TRUSTED BY EDUCATORS</span>
-                        <i className="fa-solid fa-star text-blue-600 ml-2 group-hover:animate-pulse group-hover:text-blue-700 transition-colors duration-300" />
+            {/* Main Content - Professional Mobile Design */}
+            <div className="relative z-10 text-center px-4 sm:px-6 max-w-4xl mx-auto">
+                <div className="space-y-6 sm:space-y-8">
+                    {/* Professional Trust Badge */}
+                    <div className="inline-flex items-center bg-blue-600 text-white rounded-full px-4 sm:px-6 py-2 sm:py-3 shadow-lg">
+                        <i className="fa-solid fa-star text-yellow-400 mr-2 text-sm sm:text-base"></i>
+                        <span className="text-xs sm:text-sm font-semibold tracking-wide">TRUSTED BY EDUCATORS</span>
+                        <i className="fa-solid fa-star text-yellow-400 ml-2 text-sm sm:text-base"></i>
                     </div>
 
-                    <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-8 leading-tight text-white hover:text-white transition-colors duration-300">
+                    {/* Professional Typography */}
+                    <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-white">
                         {slides[currentSlide].title}
                     </h1>
                     
-                    <p className="text-lg sm:text-xl md:text-2xl mb-12 max-w-4xl mx-auto leading-relaxed text-white font-medium hover:text-white transition-colors duration-300">
+                    <p className="text-base sm:text-lg md:text-xl leading-relaxed text-white/90 max-w-2xl mx-auto font-light">
                         {slides[currentSlide].subtitle}
                     </p>
                     
-                    {/* Clean Action Buttons */}
-                    <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16">
+                    {/* Professional Action Buttons - Mobile Optimized */}
+                    <div className="flex flex-col gap-4 w-full max-w-sm mx-auto">
                         <Link
                             to={slides[currentSlide].link}
-                            className="group inline-flex items-center justify-center bg-red-600 hover:bg-red-700 text-white text-lg font-semibold px-10 py-4 rounded-lg transition-all duration-500 shadow-lg hover:shadow-2xl transform hover:scale-105 hover:-translate-y-1 relative overflow-hidden"
+                            className="w-full bg-red-600 hover:bg-red-700 text-white font-semibold py-4 px-6 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 flex items-center justify-center gap-3"
                         >
-                            <div className="absolute inset-0 bg-gradient-to-r from-red-500 to-red-700 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                            <i className="fa-solid fa-book mr-3 relative z-10 group-hover:animate-pulse"></i>
-                            <span className="relative z-10">{slides[currentSlide].cta}</span>
+                            <i className="fa-solid fa-book text-lg"></i>
+                            <span className="text-lg">{slides[currentSlide].cta}</span>
                         </Link>
 
                         <Link
-                            to="#"
-                            className="group inline-flex items-center justify-center bg-white hover:bg-white text-black text-lg font-semibold px-10 py-4 rounded-lg transition-all duration-500 shadow-lg hover:shadow-2xl transform hover:scale-105 hover:-translate-y-1 relative overflow-hidden"
+                            to="/catalog"
+                            className="w-full bg-white/90 hover:bg-white text-gray-800 font-semibold py-4 px-6 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 flex items-center justify-center gap-3"
                         >
-                            <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                            <i className="fa-solid fa-book mr-3 relative z-10 group-hover:animate-pulse"></i>
-                            <span className="relative z-10">View All Books</span>
+                            <i className="fa-solid fa-list text-lg"></i>
+                            <span className="text-lg">View Catalog</span>
                         </Link>
-                    </div>
-                </div>
-
-                {/* Educational Stats */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto mb-8">
-                    <div className="group text-center bg-white rounded-xl p-8 shadow-lg border border-gray-200 hover:shadow-2xl transition-all duration-500 transform hover:scale-105 hover:-translate-y-2 cursor-pointer relative overflow-hidden">
-                        <div className="absolute inset-0 bg-gradient-to-br from-blue-50 to-indigo-50 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                        <div className="relative z-10">
-                            <div className="text-4xl sm:text-5xl font-bold mb-4 text-red-600 group-hover:text-red-700 transition-colors duration-300 group-hover:animate-pulse">
-                                10,000+
-                            </div>
-                            <div className="text-base sm:text-lg text-gray-700 font-semibold group-hover:text-gray-800 transition-colors duration-300">Academic Books</div>
-                            <div className="mt-3 transform group-hover:scale-110 group-hover:rotate-12 transition-transform duration-300">
-                                <i className="fa-solid fa-book text-red-500 text-2xl group-hover:text-red-600" />
-                            </div>
-                        </div>
-                    </div>
-                    <div className="group text-center bg-white rounded-xl p-8 shadow-lg border border-gray-200 hover:shadow-2xl transition-all duration-500 transform hover:scale-105 hover:-translate-y-2 cursor-pointer relative overflow-hidden">
-                        <div className="absolute inset-0 bg-gradient-to-br from-green-50 to-emerald-50 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                        <div className="relative z-10">
-                            <div className="text-4xl sm:text-5xl font-bold mb-4 text-red-600 group-hover:text-red-600 transition-colors duration-300 group-hover:animate-pulse">
-                                50,000+
-                            </div>
-                            <div className="text-base sm:text-lg text-gray-700 font-semibold group-hover:text-gray-800 transition-colors duration-300">Happy Students</div>
-                            <div className="mt-3 transform group-hover:scale-110 group-hover:rotate-12 transition-transform duration-300">
-                                <i className="fa-solid fa-user-graduate text-red-500 text-2xl group-hover:text-red-600" />
-                            </div>
-                        </div>
-                    </div>
-                    <div className="group text-center bg-white rounded-xl p-8 shadow-lg border border-gray-200 hover:shadow-2xl transition-all duration-500 transform hover:scale-105 hover:-translate-y-2 cursor-pointer relative overflow-hidden">
-                        <div className="absolute inset-0 bg-gradient-to-br from-purple-50 to-pink-50 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                        <div className="relative z-10">
-                            <div className="text-4xl sm:text-5xl font-bold mb-4 text-red-600 group-hover:text-red-600 transition-colors duration-300 group-hover:animate-pulse">
-                                500+
-                            </div>
-                            <div className="text-base sm:text-lg text-gray-700 font-semibold group-hover:text-gray-800 transition-colors duration-300">Expert Authors</div>
-                            <div className="mt-3 transform group-hover:scale-110 group-hover:rotate-12 transition-transform duration-300">
-                                <i className="fa-solid fa-chalkboard-teacher text-red-500 text-2xl group-hover:text-red-600" />
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
 
-            {/* Simple Navigation Dots */}
-            <div className="absolute bottom-20 left-1/2 transform -translate-x-1/2 flex space-x-3 bg-white/90 px-6 py-3 rounded-full shadow-lg border border-gray-200 backdrop-blur-sm">
+            {/* Professional Slide Indicators */}
+            <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex space-x-2">
                 {slides.map((_, index) => (
                     <button
                         key={index}
                         onClick={() => setCurrentSlide(index)}
-                        className={`transition-all duration-500 hover:scale-125 ${
+                        className={`transition-all duration-300 rounded-full ${
                             index === currentSlide 
-                                ? 'w-8 h-3 bg-red-600 shadow-md' 
-                                : 'w-3 h-3 bg-gray-300 hover:bg-gray-400'
-                        } rounded-full transform hover:-translate-y-0.5`}
+                                ? 'w-8 h-3 bg-white' 
+                                : 'w-3 h-3 bg-white/50 hover:bg-white/70'
+                        }`}
                     />
                 ))}
-            </div>
-
-            {/* Simple Navigation Arrows */}
-            <button
-                onClick={() => setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length)}
-                className="group absolute left-6 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-white hover:bg-gray-50 rounded-full flex items-center justify-center text-gray-600 transition-all duration-300 shadow-lg border border-gray-200 hover:shadow-xl hover:scale-110 hover:-translate-x-1"
-            >
-                <i className="fa-solid fa-chevron-left group-hover:-translate-x-0.5 transition-transform duration-300" />
-            </button>
-            <button
-                onClick={() => setCurrentSlide((prev) => (prev + 1) % slides.length)}
-                className="group absolute right-6 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-white hover:bg-gray-50 rounded-full flex items-center justify-center text-gray-600 transition-all duration-300 shadow-lg border border-gray-200 hover:shadow-xl hover:scale-110 hover:translate-x-1"
-            >
-                <i className="fa-solid fa-chevron-right group-hover:translate-x-0.5 transition-transform duration-300" />
-            </button>
-
-            {/* Educational Features Banner */}
-            <div className="absolute bottom-0 left-0 right-0 bg-red-600 hover:bg-red-700 text-white py-4 transition-colors duration-500 cursor-pointer group">
-                <div className="max-w-6xl mx-auto px-6">
-                    <div className="flex flex-wrap justify-center items-center space-x-8 text-sm font-medium">
-                        <div className="flex items-center transform group-hover:scale-105 transition-transform duration-300">
-                            <i className="fa-solid fa-truck mr-2 group-hover:animate-bounce" />
-                            <span>Free Shipping on Orders ₹500+</span>
-                        </div>
-                        <div className="flex items-center transform group-hover:scale-105 transition-transform duration-300">
-                            <i className="fa-solid fa-shield-check mr-2 group-hover:animate-pulse" />
-                            <span>Authentic Books Guaranteed</span>
-                        </div>
-                        <div className="flex items-center transform group-hover:scale-105 transition-transform duration-300">
-                            <i className="fa-solid fa-headset mr-2 group-hover:animate-pulse" />
-                            <span>24/7 Student Support</span>
-                        </div>
-                    </div>
-                </div>
             </div>
         </section>
     )
