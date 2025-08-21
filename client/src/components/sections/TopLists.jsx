@@ -145,8 +145,8 @@ export default function TopLists() {
     ]
 
     const BookCard = ({ book, showRank = false, borderColor = '' }) => (
-        <div className={`book-card p-4 bg-white ${borderColor} relative overflow-hidden stagger-item`}>
-            <div className="book-cover h-52 rounded-xl mb-4 overflow-hidden relative group bg-white shadow-sm">
+        <div className={`book-card bg-white ${borderColor} relative overflow-hidden stagger-item`}>
+            <div className="book-cover rounded-xl overflow-hidden relative group bg-white shadow-sm">
                 <img 
                     src={book.image} 
                     alt={book.title}
@@ -168,27 +168,29 @@ export default function TopLists() {
             </div>
             
             <div className="book-card-content">
-                <div className="space-y-2 flex-1">
-                    <h3 className="book-title line-clamp-2 hover:text-blue-600 transition-colors duration-300">
+                <div className="flex-1">
+                    <h3 className="book-title hover:text-blue-600 transition-colors duration-300">
                         {book.title}
                     </h3>
-                    <p className="book-author line-clamp-1">{book.author}</p>
+                    <p className="book-author">{book.author}</p>
                     
                     {book.rating && (
-                        <div className="flex items-center gap-1 mb-2">
-                            {[...Array(5)].map((_, i) => (
-                                <i 
-                                    key={i}
-                                    className={`fa-solid fa-star text-xs ${
-                                        i < Math.floor(book.rating) ? 'text-yellow-400' : 'text-gray-300'
-                                    }`} 
-                                />
-                            ))}
-                            <span className="text-xs text-gray-600 ml-1">({book.rating})</span>
+                        <div className="book-card-rating-container">
+                            <div className="book-card-rating">
+                                {[...Array(5)].map((_, i) => (
+                                    <i 
+                                        key={i}
+                                        className={`fa-solid fa-star text-xs ${
+                                            i < Math.floor(book.rating) ? 'text-yellow-400' : 'text-gray-300'
+                                        }`} 
+                                    />
+                                ))}
+                                <span className="book-card-rating-text">({book.rating})</span>
+                            </div>
                         </div>
                     )}
                     
-                    <div className="flex items-center justify-between mb-3">
+                    <div className="book-card-price-section">
                         <div className="book-price">₹{book.price}</div>
                         {book.tag && (
                             <span className="book-tag text-rose-600 bg-rose-100">
@@ -202,7 +204,7 @@ export default function TopLists() {
                     <button 
                         onClick={() => handleAddToCart(book)} 
                         disabled={addingItems.has(book.id)}
-                        className={`w-full py-2.5 rounded-xl font-medium transition-all duration-300 transform ${
+                        className={`${
                             addingItems.has(book.id)
                                 ? 'bg-green-500 text-white scale-95'
                                 : 'bg-red-600 text-white hover:bg-red-700 hover:scale-105 hover:shadow-lg'

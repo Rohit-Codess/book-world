@@ -74,10 +74,10 @@ export default function PreOrder() {
                     {pres.map((b, index) => (
                         <div 
                             key={b.id} 
-                            className="book-card p-4 bg-white border-2 border-yellow-200 relative overflow-hidden stagger-item"
+                            className="book-card bg-white border-2 border-yellow-200 relative overflow-hidden stagger-item"
                             style={{ animationDelay: `${index * 0.1}s` }}
                         >
-                            <div className="book-cover h-52 rounded-xl mb-4 overflow-hidden relative group bg-white shadow-sm">
+                            <div className="book-cover rounded-xl overflow-hidden relative group bg-white shadow-sm">
                                 <img 
                                     src={b.image} 
                                     alt={b.title}
@@ -97,23 +97,25 @@ export default function PreOrder() {
                             </div>
                             
                             <div className="book-card-content">
-                                <div className="space-y-2 flex-1">
-                                    <h3 className="book-title line-clamp-2 hover:text-yellow-600 transition-colors duration-300">
+                                <div className="flex-1">
+                                    <h3 className="book-title hover:text-yellow-600 transition-colors duration-300">
                                         {b.title}
                                     </h3>
-                                    <p className="book-author line-clamp-1">{b.author}</p>
-                                    <p className="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded-full inline-block truncate-ellipsis max-w-full">
+                                    <p className="book-author">{b.author}</p>
+                                    <p className="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded-full inline-block mb-2 max-w-full overflow-hidden text-ellipsis whitespace-nowrap">
                                         Expected: {b.eta}
                                     </p>
                                     
-                                    <div className="book-price text-yellow-600 mb-3">₹{b.price}</div>
+                                    <div className="book-card-price-section">
+                                        <div className="book-price text-yellow-600">₹{b.price}</div>
+                                    </div>
                                 </div>
                                 
                                 <div className="book-card-button">
                                     <button 
                                         onClick={() => handlePreOrder(b)} 
                                         disabled={addingItems.has(b.id)}
-                                        className={`w-full py-2.5 rounded-xl font-medium transition-all duration-300 transform ${
+                                        className={`${
                                             addingItems.has(b.id)
                                                 ? 'bg-green-500 text-white scale-95'
                                                 : 'bg-red-500 text-white hover:bg-red-600 hover:scale-105 hover:shadow-lg'

@@ -92,7 +92,7 @@ export default function Deals() {
                     {deals.map((b, index) => (
                         <div 
                             key={b.id} 
-                            className="book-card p-4 bg-white relative overflow-hidden stagger-item"
+                            className="book-card bg-white relative overflow-hidden stagger-item"
                             style={{ animationDelay: `${index * 0.1}s` }}
                         >
                             {/* Deal Ribbon */}
@@ -100,7 +100,7 @@ export default function Deals() {
                                 DEAL
                             </div>
                             
-                            <div className="book-cover h-52 rounded-xl mb-4 overflow-hidden relative group bg-white shadow-sm">
+                            <div className="book-cover rounded-xl overflow-hidden relative group bg-white shadow-sm">
                                 <img 
                                     src={b.image} 
                                     alt={b.title}
@@ -117,14 +117,14 @@ export default function Deals() {
                             </div>
                             
                             <div className="book-card-content">
-                                <div className="space-y-2 flex-1">
-                                    <h3 className="book-title line-clamp-2 hover:text-red-600 transition-colors duration-300">
+                                <div className="flex-1">
+                                    <h3 className="book-title hover:text-red-600 transition-colors duration-300">
                                         {b.title}
                                     </h3>
-                                    <p className="book-author line-clamp-1">{b.author}</p>
+                                    <p className="book-author">{b.author}</p>
                                     
-                                    <div className="flex items-center justify-between mb-2">
-                                        <div className="flex items-center gap-1">
+                                    <div className="book-card-rating-container">
+                                        <div className="book-card-rating">
                                             {[...Array(5)].map((_, i) => (
                                                 <i 
                                                     key={i}
@@ -133,17 +133,19 @@ export default function Deals() {
                                                     }`} 
                                                 />
                                             ))}
-                                            <span className="text-xs text-gray-600 ml-1">({b.rating})</span>
+                                            <span className="book-card-rating-text">({b.rating})</span>
                                         </div>
                                         <span className="book-tag bg-red-100 text-red-600 animate-pulse font-bold">
                                             {b.off}
                                         </span>
                                     </div>
                                     
-                                    <div className="flex items-center gap-2 mb-3">
-                                        <span className="book-price text-red-600">₹{b.price}</span>
-                                        <span className="text-sm text-gray-500 line-through">₹{b.listPrice}</span>
-                                        <span className="text-xs text-green-600 font-medium truncate-ellipsis">
+                                    <div className="book-card-price-section">
+                                        <div className="flex items-center gap-2">
+                                            <span className="book-price text-red-600">₹{b.price}</span>
+                                            <span className="text-sm text-gray-500 line-through">₹{b.listPrice}</span>
+                                        </div>
+                                        <span className="text-xs text-green-600 font-medium">
                                             Save ₹{b.listPrice - b.price}
                                         </span>
                                     </div>
@@ -153,7 +155,7 @@ export default function Deals() {
                                     <button 
                                         onClick={() => handleAddToCart(b)} 
                                         disabled={addingItems.has(b.id)}
-                                        className={`w-full py-2.5 rounded-xl font-medium transition-all duration-300 transform ${
+                                        className={`${
                                             addingItems.has(b.id)
                                                 ? 'bg-green-500 text-white scale-95'
                                                 : 'bg-red-600 text-white hover:bg-red-700 hover:scale-105 hover:shadow-lg'
