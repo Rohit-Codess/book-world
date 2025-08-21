@@ -377,7 +377,16 @@ body {
   display: flex;
   flex-direction: column;
   height: 100%;
-  min-height: 400px; /* Ensures consistent card height */
+  min-height: 350px; /* Smaller minimum height for mobile */
+  padding: 0.75rem; /* Smaller padding for mobile */
+}
+
+/* Responsive adjustments for book cards */
+@media (min-width: 768px) {
+  .book-card {
+    min-height: 400px; /* Original height for tablet+ */
+    padding: 1rem; /* Original padding for tablet+ */
+  }
 }
 
 /* Book card shine effect on hover */
@@ -409,6 +418,14 @@ body {
   overflow: hidden;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   flex-shrink: 0; /* Prevents cover from shrinking */
+  height: 10rem; /* Smaller height for mobile */
+}
+
+/* Responsive book cover sizing */
+@media (min-width: 768px) {
+  .book-card .book-cover {
+    height: 13rem; /* Original height for tablet+ */
+  }
 }
 
 .book-card:hover .book-cover {
@@ -484,13 +501,22 @@ body {
 /* Book title styling with reserved space */
 .book-title {
   font-weight: 600;
-  font-size: 0.875rem;
-  line-height: 1.25rem;
+  font-size: 0.75rem; /* Smaller font for mobile */
+  line-height: 1rem;
   color: rgb(31 41 55);
   transition: color 0.3s ease;
-  min-height: 2.5rem; /* Reserve space for 2 lines */
+  min-height: 2rem; /* Smaller reserved space for mobile */
   display: flex;
   align-items: flex-start;
+}
+
+/* Responsive book title sizing */
+@media (min-width: 768px) {
+  .book-title {
+    font-size: 0.875rem; /* Original size for tablet+ */
+    line-height: 1.25rem;
+    min-height: 2.5rem; /* Original reserved space */
+  }
 }
 
 /* Book author styling */
