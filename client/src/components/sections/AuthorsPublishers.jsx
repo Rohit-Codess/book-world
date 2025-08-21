@@ -2,21 +2,21 @@ import React from 'react'
 
 export default function AuthorsPublishers() {
     const authors = [
-        { name: 'Stephen King', role: 'Horror Fiction', image: '/src/assets/section/AuthorsPublishers/authors/1.png' },
-        { name: 'J.K. Rowling', role: 'Fantasy', image: '/src/assets/section/AuthorsPublishers/authors/2.png' },
-        { name: 'Dan Brown', role: 'Thriller', image: '/src/assets/section/AuthorsPublishers/authors/3.png' },
-        { name: 'Paulo Coelho', role: 'Philosophy', image: '/src/assets/section/AuthorsPublishers/authors/4.png' },
-        { name: 'Agatha Christie', role: 'Mystery', image: '/src/assets/section/AuthorsPublishers/authors/5.png' },
-        { name: 'Malcolm Gladwell', role: 'Non-Fiction', image: '/src/assets/section/AuthorsPublishers/authors/6.png' },
+        { name: 'Stephen King', role: 'Horror Fiction', image: '/section/AuthorsPublishers/authors/1.png' },
+        { name: 'J.K. Rowling', role: 'Fantasy', image: '/section/AuthorsPublishers/authors/2.png' },
+        { name: 'Dan Brown', role: 'Thriller', image: '/section/AuthorsPublishers/authors/3.png' },
+        { name: 'Paulo Coelho', role: 'Philosophy', image: '/section/AuthorsPublishers/authors/4.png' },
+        { name: 'Agatha Christie', role: 'Mystery', image: '/section/AuthorsPublishers/authors/5.png' },
+        { name: 'Malcolm Gladwell', role: 'Non-Fiction', image: '/section/AuthorsPublishers/authors/6.png' },
     ]
     
     const publishers = [
-        { name: 'PENGUIN', sub: 'Random House', image: '/src/assets/section/AuthorsPublishers/publishers/1.png' },
-        { name: 'HARPER', sub: 'Collins Publishers', image: '/src/assets/section/AuthorsPublishers/publishers/2.png' },
-        { name: 'RUPA', sub: 'Publications', image: '/src/assets/section/AuthorsPublishers/publishers/3.png' },
-        { name: 'MACMILLAN', sub: 'Publishers', image: '/src/assets/section/AuthorsPublishers/publishers/4.png' },
-        { name: 'OXFORD', sub: 'University Press', image: '/src/assets/section/AuthorsPublishers/publishers/5.png' },
-        { name: 'BLOOMSBURY', sub: 'Publishing', image: '/src/assets/section/AuthorsPublishers/publishers/6.png' },
+        { name: 'PENGUIN', sub: 'Random House', image: '/section/AuthorsPublishers/publishers/1.png' },
+        { name: 'HARPER', sub: 'Collins Publishers', image: '/section/AuthorsPublishers/publishers/2.png' },
+        { name: 'RUPA', sub: 'Publications', image: '/section/AuthorsPublishers/publishers/3.png' },
+        { name: 'MACMILLAN', sub: 'Publishers', image: '/section/AuthorsPublishers/publishers/4.png' },
+        { name: 'OXFORD', sub: 'University Press', image: '/section/AuthorsPublishers/publishers/5.png' },
+        { name: 'BLOOMSBURY', sub: 'Publishing', image: '/section/AuthorsPublishers/publishers/6.png' },
     ]
     
     return (

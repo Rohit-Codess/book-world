@@ -10,7 +10,7 @@ const deals = [
         listPrice: 399, 
         off: '25% OFF', 
         rating: 4.8,
-        image: '/src/assets/section/Deals/1.png'
+        image: '/section/Deals/1.png'
     },
     { 
         id: 'deal-2', 
@@ -20,7 +20,7 @@ const deals = [
         listPrice: 449, 
         off: '22% OFF', 
         rating: 4.7,
-        image: '/src/assets/section/Deals/2.png'
+        image: '/section/Deals/2.png'
     },
     { 
         id: 'deal-3', 
@@ -30,7 +30,7 @@ const deals = [
         listPrice: 359, 
         off: '20% OFF', 
         rating: 4.9,
-        image: '/src/assets/section/Deals/3.png'
+        image: '/section/Deals/3.png'
     },
     { 
         id: 'deal-4', 
@@ -40,7 +40,7 @@ const deals = [
         listPrice: 399, 
         off: '20% OFF', 
         rating: 4.6,
-        image: '/src/assets/section/Deals/4.png'
+        image: '/section/Deals/4.png'
     },
     { 
         id: 'deal-5', 
@@ -50,7 +50,7 @@ const deals = [
         listPrice: 369, 
         off: '22% OFF', 
         rating: 4.5,
-        image: '/src/assets/section/Deals/5.png'
+        image: '/section/Deals/5.png'
     }
 ]
 

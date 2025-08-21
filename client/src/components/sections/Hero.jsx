@@ -10,21 +10,21 @@ export default function Hero() {
             subtitle: "Your trusted partner for academic books, educational resources, and learning materials",
             cta: "Browse Books",
             link: "/catalog",
-            bgImage: "/src/assets/section/Hero/1.png"
+            bgImage: "/section/Hero/1.png"
         },
         {
             title: "Academic Excellence",
             subtitle: "Comprehensive collection of textbooks, reference materials, and study guides for all levels",
             cta: "Academic Books",
             link: "#academic",
-            bgImage: "/src/assets/section/Hero/2.png"
+            bgImage: "/section/Hero/2.png"
         },
         {
             title: "Learning Made Easy",
             subtitle: "Quality educational content designed to support students and educators in their journey",
             cta: "Explore Resources",
             link: "#new-arrivals",
-            bgImage: "/src/assets/section/Hero/3.png"
+            bgImage: "/section/Hero/3.png"
         }
     ]
 

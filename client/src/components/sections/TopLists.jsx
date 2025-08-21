@@ -27,7 +27,7 @@ export default function TopLists() {
             author: 'Alex Michaelides', 
             price: 399, 
             rating: 4.8,
-            image: '/src/assets/section/TopLists/topFiction/1.png'
+            image: '/section/TopLists/topFiction/1.png'
         },
         { 
             id: 'top-fic-2',
@@ -36,7 +36,7 @@ export default function TopLists() {
             author: 'Delia Owens', 
             price: 449, 
             rating: 4.7,
-            image: '/src/assets/section/TopLists/topFiction/2.png'
+            image: '/section/TopLists/topFiction/2.png'
         },
         { 
             id: 'top-fic-3',
@@ -45,7 +45,7 @@ export default function TopLists() {
             author: 'Richard Osman', 
             price: 379, 
             rating: 4.6,
-            image: '/src/assets/section/TopLists/topFiction/3.png'
+            image: '/section/TopLists/topFiction/3.png'
         },
         { 
             id: 'top-fic-4',
@@ -54,7 +54,7 @@ export default function TopLists() {
             author: 'Matt Haig', 
             price: 419, 
             rating: 4.5,
-            image: '/src/assets/section/TopLists/topFiction/4.png'
+            image: '/section/TopLists/topFiction/4.png'
         },
         { 
             id: 'top-fic-5',
@@ -63,7 +63,7 @@ export default function TopLists() {
             author: 'Tara Westover', 
             price: 459, 
             rating: 4.4,
-            image: '/src/assets/section/TopLists/topFiction/5.png'
+            image: '/section/TopLists/topFiction/5.png'
         },
     ]
     
@@ -73,35 +73,35 @@ export default function TopLists() {
             title: 'The Fault in Our Stars', 
             author: 'John Green', 
             price: 329,
-            image: '/src/assets/section/TopLists/young/1.png'
+            image: '/section/TopLists/young/1.png'
         },
         { 
             id: 'young-2',
             title: 'The Hunger Games', 
             author: 'Suzanne Collins', 
             price: 349,
-            image: '/src/assets/section/TopLists/young/2.png'
+            image: '/section/TopLists/young/2.png'
         },
         { 
             id: 'young-3',
             title: 'Divergent', 
             author: 'Veronica Roth', 
             price: 299,
-            image: '/src/assets/section/TopLists/young/3.png'
+            image: '/section/TopLists/young/3.png'
         },
         { 
             id: 'young-4',
             title: 'Eleanor & Park', 
             author: 'Rainbow Rowell', 
             price: 309,
-            image: '/src/assets/section/TopLists/young/4.png'
+            image: '/section/TopLists/young/4.png'
         },
         { 
             id: 'young-5',
             title: 'The Perks of Being a Wallflower', 
             author: 'Stephen Chbosky', 
             price: 319,
-            image: '/src/assets/section/TopLists/young/5.png'
+            image: '/section/TopLists/young/5.png'
         },
     ]
     
@@ -112,35 +112,35 @@ export default function TopLists() {
             author: 'J.K. Rowling', 
             price: 1999, 
             tag: 'Complete Set',
-            image: '/src/assets/section/TopLists/kids/1.png'
+            image: '/section/TopLists/kids/1.png'
         },
         { 
             id: 'kids-2',
             title: 'The Cat in the Hat', 
             author: 'Dr. Seuss', 
             price: 199,
-            image: '/src/assets/section/TopLists/kids/2.png'
+            image: '/section/TopLists/kids/2.png'
         },
         { 
             id: 'kids-3',
             title: 'Where the Wild Things Are', 
             author: 'Maurice Sendak', 
             price: 249,
-            image: '/src/assets/section/TopLists/kids/3.png'
+            image: '/section/TopLists/kids/3.png'
         },
         { 
             id: 'kids-4',
             title: 'Goodnight Moon', 
             author: 'Margaret Wise Brown', 
             price: 179,
-            image: '/src/assets/section/TopLists/kids/4.png'
+            image: '/section/TopLists/kids/4.png'
         },
         { 
             id: 'kids-5',
             title: 'The Giving Tree', 
             author: 'Shel Silverstein', 
             price: 229,
-            image: '/src/assets/section/TopLists/kids/5.png'
+            image: '/section/TopLists/kids/5.png'
         },
     ]
 
