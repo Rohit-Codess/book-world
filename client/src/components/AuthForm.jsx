@@ -130,7 +130,7 @@ export default function AuthForm({
                     type="text"
                     value={formData.fullName}
                     onChange={handleChange}
-                    className={`w-full px-4 py-3 pl-12 border rounded-xl focus:ring-2 focus:ring-red-500/30 focus:border-red-500 transition-all duration-300 ${
+                    className={`w-full text-black px-4 py-3 pl-12 border rounded-xl focus:ring-2 focus:ring-red-500/30 focus:border-red-500 transition-all duration-300 ${
                       errors.fullName ? 'border-red-300 bg-red-50' : 'border-gray-300'
                     }`}
                     placeholder="Enter your full name"
@@ -158,7 +158,7 @@ export default function AuthForm({
                   type="email"
                   value={formData.email}
                   onChange={handleChange}
-                  className={`w-full px-4 py-3 pl-12 border rounded-xl focus:ring-2 focus:ring-red-500/30 focus:border-red-500 transition-all duration-300 ${
+                  className={`w-full text-black px-4 py-3 pl-12 border rounded-xl focus:ring-2 focus:ring-red-500/30 focus:border-red-500 transition-all duration-300 ${
                     errors.email ? 'border-red-300 bg-red-50' : 'border-gray-300'
                   }`}
                   placeholder="Enter your email"
@@ -185,7 +185,7 @@ export default function AuthForm({
                   type={showPassword ? 'text' : 'password'}
                   value={formData.password}
                   onChange={handleChange}
-                  className={`w-full px-4 py-3 pl-12 pr-12 border rounded-xl focus:ring-2 focus:ring-red-500/30 focus:border-red-500 transition-all duration-300 ${
+                  className={`w-full text-black px-4 py-3 pl-12 pr-12 border rounded-xl focus:ring-2 focus:ring-red-500/30 focus:border-red-500 transition-all duration-300 ${
                     errors.password ? 'border-red-300 bg-red-50' : 'border-gray-300'
                   }`}
                   placeholder="Enter your password"
@@ -220,7 +220,7 @@ export default function AuthForm({
                     type={showConfirmPassword ? 'text' : 'password'}
                     value={formData.confirmPassword}
                     onChange={handleChange}
-                    className={`w-full px-4 py-3 pl-12 pr-12 border rounded-xl focus:ring-2 focus:ring-red-500/30 focus:border-red-500 transition-all duration-300 ${
+                    className={`w-full text-black px-4 py-3 pl-12 pr-12 border rounded-xl focus:ring-2 focus:ring-red-500/30 focus:border-red-500 transition-all duration-300 ${
                       errors.confirmPassword ? 'border-red-300 bg-red-50' : 'border-gray-300'
                     }`}
                     placeholder="Confirm your password"
