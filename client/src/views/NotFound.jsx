@@ -47,11 +47,11 @@ export default function NotFound() {
                 <div className="mt-12 p-6 bg-white rounded-2xl shadow-soft animate-scale-in" style={{ animationDelay: '0.6s' }}>
                     <h3 className="font-semibold text-gray-800 mb-3">While you're here, you might enjoy:</h3>
                     <div className="flex flex-wrap justify-center gap-3 text-sm">
-                        <Link to="/catalog" className="text-blue-600 hover:text-blue-800 transition-colors">Popular Books</Link>
+                        <Link to="/books" className="text-blue-600 hover:text-blue-800 transition-colors">Popular Books</Link>
                         <span className="text-gray-300">•</span>
-                        <Link to="/#new-arrivals" className="text-blue-600 hover:text-blue-800 transition-colors">New Arrivals</Link>
+                        <Link to="/" className="text-blue-600 hover:text-blue-800 transition-colors">New Arrivals</Link>
                         <span className="text-gray-300">•</span>
-                        <Link to="/#deals" className="text-blue-600 hover:text-blue-800 transition-colors">Special Deals</Link>
+                        <Link to="/books" className="text-blue-600 hover:text-blue-800 transition-colors">Special Deals</Link>
                     </div>
                 </div>
 
