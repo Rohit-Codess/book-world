@@ -59,12 +59,12 @@ export default function Header() {
     // Navigation items with their corresponding sections
     const navItems = [
         { name: 'Home', href: '/', type: 'link' },
-        { name: 'Books', href: '#deals', type: 'anchor' },
-        { name: 'Stationery', href: '#stationery', type: 'anchor' },
-        { name: 'School', href: '#school', type: 'anchor' },
-        { name: 'Authors', href: '#authors', type: 'anchor' },
-        { name: 'Publishers', href: '#publishers', type: 'anchor' },
-        { name: 'New Arrivals', href: '#new-arrivals', type: 'anchor' }
+        { name: 'Books', href: '/books', type: 'link' },
+        { name: 'Stationery', href: '/stationery', type: 'link' },
+        { name: 'School', href: '/school', type: 'link' },
+        { name: 'Authors', href: '/authors', type: 'link' },
+        { name: 'Publishers', href: '/publishers', type: 'link' },
+        { name: 'New Arrivals', href: '/new-arrivals', type: 'anchor' }
     ]
 
     return (
@@ -175,9 +175,9 @@ export default function Header() {
                                     )
                                 } else {
                                     return (
-                                        <a
+                                        <Link
                                             key={item.name}
-                                            href={item.href}
+                                            to={item.href}
                                             className={`${baseClasses} ${activeClasses}`}
                                             onClick={() => setActiveNav(item.name)}
                                         >
@@ -190,7 +190,7 @@ export default function Header() {
                                             {isActive && (
                                                 <span className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-2 h-2 bg-white rounded-full"></span>
                                             )}
-                                        </a>
+                                        </Link>
                                     )
                                 }
                             })}
@@ -274,7 +274,15 @@ export default function Header() {
                                         }}
                                     >
                                         <span className="flex items-center gap-3">
-                                            <i className="fa-solid fa-home w-5" />
+                                            <i className={`fa-solid ${
+                                                item.name === 'Home' ? 'fa-home' :
+                                                item.name === 'Books' ? 'fa-book' :
+                                                item.name === 'Stationery' ? 'fa-pen' :
+                                                item.name === 'School' ? 'fa-graduation-cap' :
+                                                item.name === 'Authors' ? 'fa-user-edit' :
+                                                item.name === 'Publishers' ? 'fa-building' :
+                                                'fa-star'
+                                            } w-5`} />
                                             {item.name}
                                         </span>
                                         {isActive && <i className="fa-solid fa-chevron-right text-white" />}
@@ -292,14 +300,7 @@ export default function Header() {
                                         }}
                                     >
                                         <span className="flex items-center gap-3">
-                                            <i className={`fa-solid ${
-                                                item.name === 'Books' ? 'fa-book' :
-                                                item.name === 'Stationery' ? 'fa-pen' :
-                                                item.name === 'School' ? 'fa-graduation-cap' :
-                                                item.name === 'Authors' ? 'fa-user-edit' :
-                                                item.name === 'Publishers' ? 'fa-building' :
-                                                'fa-star'
-                                            } w-5`} />
+                                            <i className="fa-solid fa-star w-5" />
                                             {item.name}
                                             {item.name === 'New Arrivals' && !isActive && (
                                                 <span className="bg-red-500 text-white text-xs px-2 py-0.5 rounded-full font-bold ml-2">
