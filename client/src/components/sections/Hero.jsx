@@ -36,7 +36,7 @@ export default function Hero() {
     }, [slides.length])
 
     return (
-        <section className="relative h-[50vh] flex items-center justify-center overflow-hidden">
+        <section className="relative h-[50vh] md:h-[90vh] flex items-center justify-center overflow-hidden">
             {/* Sliding Background Container */}
             <div className="absolute inset-0 flex transition-transform duration-1000 ease-in-out"
                  style={{ transform: `translateX(-${currentSlide * 100}%)` }}>
