@@ -138,10 +138,13 @@ export default function Header() {
                             )}
                         </button>
                         
-                        <button className="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-lg font-semibold transition-all duration-300 hover:scale-105 shadow-md">
+                        <Link 
+                            to="/login" 
+                            className="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-lg font-semibold transition-all duration-300 hover:scale-105 shadow-md"
+                        >
                             <i className="fa-regular fa-user mr-2" />
                             <span className="hidden sm:inline">Login</span>
-                        </button>
+                        </Link>
                     </div>
                 </div>
 
@@ -345,10 +348,14 @@ export default function Header() {
 
                     {/* Login Button */}
                     <div className="p-4 border-t border-gray-200">
-                        <button className="w-full bg-red-500 hover:bg-red-600 text-white px-4 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center gap-2">
+                        <Link 
+                            to="/login" 
+                            className="w-full bg-red-500 hover:bg-red-600 text-white px-4 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center gap-2"
+                            onClick={() => setIsMobileMenuOpen(false)}
+                        >
                             <i className="fa-regular fa-user" />
                             Login / Sign Up
-                        </button>
+                        </Link>
                     </div>
 
                     {/* Shipping Info */}
