@@ -122,7 +122,7 @@ export default function Header() {
                         </button>
                         
                         <Link 
-                            to="/catalog" 
+                            to="/" 
                             className="text-gray-700 hover:text-red-500 hidden sm:inline-flex transition-all duration-300 hover:scale-105 micro-bounce"
                         >
                             Catalog

@@ -11,7 +11,7 @@ export default function App() {
     <Routes>
       <Route element={<Layout />}>
         <Route path="/" element={<HomeView />} />
-        <Route path="/catalog" element={<CatalogView />} />
+        {/* <Route path="/catalog" element={<CatalogView />} /> */}
         <Route path="*" element={<NotFound />} />
       </Route>
     </Routes>
